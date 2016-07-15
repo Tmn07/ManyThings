@@ -9,3 +9,9 @@
 ### 正文
 - chrome字体发虚解决方案[这里](http://www.findspace.name/res/1388)
 
+### xampp
+- 自己配过apache，mysql。。但是有点麻烦。就。。
+- 在opt/lampp目录下
+  - sudo opt/lampp/lampp start(stop)
+  - 或者cd到后  sudo ./manager-linux-x64.run 有图形界面。
+
