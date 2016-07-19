@@ -34,9 +34,15 @@
 	> // 第一个为查询条件，第二个为更改的条件{$set:{}}为只更改这一条件，第三个参数表明若不存在则成生一条这样的数据B，第四个为更改的条目，默认为搜索到的第一条
 - db.xxx.remove({A}) // 删除所有搜索到的数据
 
+### 查询
+- db.xxx.find({key:{$exists:true}}) // 查询包含这个字段的
+
 ### 索引
 - db.tablename.getIndexes() //获取当前索引
-- db.tablename.ensureIndex({key:1}) //建立索引.{key:value} value：1为顺序，-1为逆序
+- db.tablename.ensureIndex({key:1},{name:"xxx"},{unique:true},{sparse:true},{expireAfterSeconds:xxx}) //建立索引.{key:value} value：1为顺序，-1为逆序
+	- 	索引的属性，name，unique唯一性
+	- 	{sparse:true} 稀疏索引。对不存在该字段的条目不建立索引。
+	>   如果强制使用稀疏索引则查不到其他的。.hint({"xxx"})
 - 单键索引
 - 多键索引（支持数组）？
 - 复合索引 //多个查询条件的情况下
@@ -51,4 +57,10 @@
 		> "aa -bb" ——搜索 aa 不包含 bb
 		> 转义\\\\
 	-	db.imooc.find({$text:{$search:"love"}},{score:{$meta:"textScore"}}).sort({score:{$meta:"textScore"}}) //相似度。。并排序
-	-
+- 地理位置索引
+	- 	2D索引——平面
+		- 	db.tablename.ensureIndex({key:"2d"})
+		- 	[+-180,+-90]
+		- 	db.location.find({key:{$near:[1,1],$maxDistance:10}})
+		- 	
+	- 	2Dsphere——球面
