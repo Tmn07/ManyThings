@@ -16,6 +16,19 @@
   - 断开连接
 
 2. PHP连接
+3. pymongo
+
+```
+# 简直原生态。。。
+conn = pymongo.MongoClient(host='127.0.0.1',port=27017)
+db = conn['db_name']
+db['table_name'].find({})
+db['table_name'].find_one({})
+db['table_name'].insert({})
+db['table_name'].update({},{})
+db['table_name'].remove({})
+```
+
 
 ### 基本操作
 - show dbs 库http://gxxnr.cn/mobile/article.php?act=detail&a_id=163
