@@ -21,8 +21,11 @@
   - sudo opt/lampp/lampp start(stop)
   - 或者cd到后  sudo ./manager-linux-x64.run 有图形界面。
 
+### git
+- 记得ssh-add
+
 ### shell编程
-- 文件开头 #!/bin/sh 
+- 文件开头 #!/bin/sh
 - chmod +x filename //一次即可
 - 运行 ./filename
 - ![shelll](./resource/img/shell-demo.png)
