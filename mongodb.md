@@ -21,7 +21,8 @@
 ```
 # 简直原生态。。。
 conn = pymongo.MongoClient(host='127.0.0.1',port=27017)
-db = conn['db_name']
+db = conn['admin']
+db.authenticate('root','root')
 db['table_name'].find({})
 db['table_name'].find_one({})
 db['table_name'].insert({})
@@ -77,3 +78,14 @@ db['table_name'].remove({})
 		- 	db.location.find({key:{$near:[1,1],$maxDistance:10}})
 		- 	
 	- 	2Dsphere——球面
+
+### 权限
+- conf 中开启auth = true
+- db.createUser({user:xx,pwd:xx,roles:['root']}) // root帐号
+- 重启mongod
+- 登入方式
+	1. bin/mongo 127.0.0.1:12345 -u root -p root --authenticationDatabase admin
+		- 后面两个参数呃。。
+	2. bin/mongo 127.0.0.1:12345 -
+		- use admin
+		- db.auth('','')
