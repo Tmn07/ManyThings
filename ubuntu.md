@@ -21,8 +21,21 @@
   - sudo opt/lampp/lampp start(stop)
   - 或者cd到后  sudo ./manager-linux-x64.run 有图形界面。
 
+### sublime
+- [解决中文输入](http://www.jianshu.com/p/bf05fb3a4709)
+
 ### git
-- 记得ssh-add
+-  添加新的ssh密码后。
+-  记得ssh-add。
+-  才能通过认证。。
+
+### PATH～
+- ~/.bashrc 是当前用户的
+	- ~/.profile 加载 bashrc 	
+- /etc/profile 是整个系统的。
+	- /etc/environment 也是整个系统的，“稍微特殊的写法”
+- 终端下 sudo export PATH="$PATH:your path1:your path2 …"
+	- 仅在当前终端下有效
 
 ### shell编程
 - 文件开头 #!/bin/sh
