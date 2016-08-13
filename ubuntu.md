@@ -8,7 +8,10 @@
 
 ### 正文
 - chrome字体发虚解决方案[这里](http://www.findspace.name/res/1388)
-- [赵炯 linux内核完全注释](http://download.csdn.net/detail/skyline_loafer/8215693)
+- 软工同学操作系统课：[赵炯 linux内核完全注释](http://download.csdn.net/detail/skyline_loafer/8215693)
+- [鸟哥linux基础篇](http://linux.vbird.org/linux_basic/)
+- usb连手机很卡。。试试ftp吧。filezilla远程链接的软件，不错。。meizu自带ftp好评。
+- [开热点](http://jingyan.baidu.com/article/363872ecd8f35d6e4ba16f97.html)基本差不多，有一点改变的自己试试，挺简单的。
 
 ### 目录结构
 - /etc： 上边也提到了，这个是系统中的配置文件，如果你更改了该目录下的某个文件可能会导致系统不能启动。
@@ -36,6 +39,10 @@
 	- /etc/environment 也是整个系统的，“稍微特殊的写法”
 - 终端下 sudo export PATH="$PATH:your path1:your path2 …"
 	- 仅在当前终端下有效
+
+### bash
+- ~/.bash_history 历史记录。有暴露密码风险？
+
 
 ### shell编程
 - 文件开头 #!/bin/sh
