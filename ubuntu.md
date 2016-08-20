@@ -28,13 +28,15 @@
 - [解决中文输入](http://www.jianshu.com/p/bf05fb3a4709)
 
 ### git
--  添加新的ssh密码后。
--  记得ssh-add。
+-  ssh-keygen -t rsa -C "youremail@example.com"添加新的ssh密码后。
+	-  注意~/.ssh的权限。
+-  eval `ssh-agent -s`
+-  ssh-add。
 -  才能通过认证。。
 
 ### PATH～
 - ~/.bashrc 是当前用户的
-	- ~/.profile 加载 bashrc 	
+	- ~/.profile 加载 bashrc
 - /etc/profile 是整个系统的。
 	- /etc/environment 也是整个系统的，“稍微特殊的写法”
 - 终端下 sudo export PATH="$PATH:your path1:your path2 …"
@@ -42,6 +44,11 @@
 
 ### bash
 - ~/.bash_history 历史记录。有暴露密码风险？
+- nautilus [path] 资源管理器
+- tar
+	- 	-x解压 -c压缩 -v显示过程
+	- 	-f 接文件名--必须
+	- 	(-g gzip -j bz2)
 
 
 ### shell编程

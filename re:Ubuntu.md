@@ -14,5 +14,14 @@
 - phpmyadmin在/usr/share/phpmyadmin目录，所以就用命令：sudo ln -s /usr/share/phpmyadmin /var/www/html 建立连接。
 
 
-- sudo service mysql
-- sudo service apache2
+- sudo service mysql []
+- sudo service apache2 []
+
+(13)Permission denied: AH00072: make_sock: could not bind to address [::]:80
+(13)Permission denied: AH00072: make_sock: could not bind to address 0.0.0.0:80
+这个错是因为没用root权限。。
+
+
+- sudo apt-get install apache2-dev //装apxs
+- make是出现问题。。百度google。
+- sudo apt-get install python-dev
