@@ -11,6 +11,7 @@
 	- 	sudo apt-get install redis-server
 	- 	redis-server
 	- 	redis-cli(redis-cli -h host -p port -a password)会自动开启服务？
+		- 	或者。。telnet localhost 6379。
 	- 	redis-cli shutdown关闭服务
 
 ## 使用
@@ -75,13 +76,21 @@
 
 ### pub/sub消息通信
 - 好像很有趣otz[某博客](http://blog.sina.com.cn/s/blog_62b832910100xok2.html)
+- [分析实现](http://redisbook.readthedocs.io/en/latest/feature/pubsub.html)
 - subscribe xxx
 - psubscibe pattern （订阅符合规则的）
 - publish xxx value
+- 进入订阅模式后，只能执行相关操作。
+> Once the client enters the subscribed state it is not supposed to issue any other commands, except for additional SUBSCRIBE, PSUBSCRIBE, UNSUBSCRIBE and PUNSUBSCRIBE commands.
+
+- redis-cli 进入订阅后无法在操作了。用telnet可以退订。
+	- telnet 127.0.0.1 6379
 
 ### Some
 - redis-benchmark 用于性能测试
 - 客户端命令CLIENT list , setname,getname,pause,kill
 - Redis 管道技术可以在服务端未响应时，客户端可以继续向服务端发送请求，并最终一次性读取所有服务端的响应。
+- [redis-py](https://github.com/andymccurdy/redis-py)
+- [redis-in-action](https://www.gitbook.com/book/abcfy2/redis-in-action-reading-notes)很赞
 - [关于Redis的一些常识](http://blog.csdn.net/mengxianhua/article/details/8961713)
 - [baidu经验。应用场景。](http://jingyan.baidu.com/article/fdbd4277187fb7b89e3f48f2.html)

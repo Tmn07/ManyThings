@@ -8,6 +8,9 @@
 
 ### 正文
 - chrome字体发虚解决方案[这里](http://www.findspace.name/res/1388)
+- chromium flash
+	- sudo apt-get install pepperflashplugin-nonfree
+	- sudo update-pepperflashplugin-nonfree --install
 - 软工同学操作系统课：[赵炯 linux内核完全注释](http://download.csdn.net/detail/skyline_loafer/8215693)
 - [鸟哥linux基础篇](http://linux.vbird.org/linux_basic/)
 - usb连手机很卡。。试试ftp吧。filezilla远程链接的软件，不错。。meizu自带ftp好评。
@@ -45,10 +48,15 @@
 ### bash
 - ~/.bash_history 历史记录。有暴露密码风险？
 - nautilus [path] 资源管理器
+- df各区的占用。
+- du -ah --max-depth=1 查看占用空间
 - tar
 	- 	-x解压 -c压缩 -v显示过程
 	- 	-f 接文件名--必须
 	- 	(-g gzip -j bz2)
+	- 	tar -xvf xxx
+	- 	tar -gcvf path file
+- unzip file -d path
 
 
 ### shell编程

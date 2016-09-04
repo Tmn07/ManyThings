@@ -15,7 +15,7 @@
 
 
 ### 搭建node的hexo博客
-- yum install nodejs 
+- yum install nodejs
 > node版本太低。。。
 - yum install npm
 - 一定要换[npm淘宝源](https://npm.taobao.org/)。。。。
